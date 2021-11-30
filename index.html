@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/assets/favicon.17e50649.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="google-signin-client_id" content="783159718748-0qog6u549qu7m8r5lv9dlgjdhp1vthmg.apps.googleusercontent.com">
+    
+
+    <script src="https://www.gstatic.com/firebasejs/ui/6.0.0/firebase-ui-auth.js"></script>
+    <link type="text/css" rel="stylesheet" href="https://www.gstatic.com/firebasejs/ui/6.0.0/firebase-ui-auth.css" />
+
+    <title>WebRTC Demo</title>
+    <script type="module" crossorigin src="/assets/index.169621e6.js"></script>
+    <link rel="modulepreload" href="/assets/vendor.595f6ddc.js">
+    <link rel="stylesheet" href="/assets/index.5607184e.css">
+  </head>
+  <body>
+    <div id="streaming-container" style="display: none;">
+      <h2>1. Start your Webcam</h2>
+    <div class="videos">
+      <span>
+        <h3>Local Stream</h3>
+        <video id="webcamVideo" autoplay playsinline muted ></video>
+      </span>
+      <span>
+        <h3>Remote Stream</h3>
+        <video id="remoteVideo" autoplay playsinline></video>
+      </span>
+
+
+    </div>
+
+    <button id="webcamButton">Start webcam</button>
+    <h2>2. Create a new Call</h2>
+    <button id="callButton" disabled>Create Call (offer)</button>
+
+    <h2>3. Join a Call</h2>
+    <p>Answer the call from a different browser window or device</p>
+    
+    <input id="callInput" />
+    <button id="answerButton" disabled>Answer</button>
+
+    <h2>4. Hangup</h2>
+
+    <button id="hangupButton" disabled>Hangup</button>
+
+    </div>
+    
+    <div id="app-main">
+      <div data-type="page" data-page="login" id="app-login">
+        <form class="no-select" id="login-form"  align="center" method="post" action="/" target="_self">
+          <img class="no-select"  src="/assets/favicon.87bcc6de.jpg" height="200px" alt="logo" oncontextmenu="return false;">
+         <div class="no-border no-select" style="margin: 0px;">
+            <div align="center" >
+              <div id="firebaseui-auth-container"></div>  
+              <div id="loader">Loading...</div>
+            </div>
+          </div>
+        </form>
+      </div>
+      <div data-type="page" data-page="home">
+        
+      </div>
+      <div align ="center" style="position:fixed; bottom: 0; left:0px; right: 0px; z-index:-2; overflow:hidden; text-align: center;">
+        <img  class="no-select" style="margin-bottom: -100;"  src="/assets/banana.fbc859fe.png" height="50em" alt="logo" oncontextmenu="return false;">
+      </div>
+      
+    </div>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" defer></script>
+    
+     <script src="https://apis.google.com/js/platform.js" async defer></script>
+    <script type="text/javascript" src="/jQuery.script.js" defer></script>
+    <!-- Firebase App (the core Firebase SDK) is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/6.1.1/firebase-app.js" defer></script>
+    
+    <!-- Add Firebase products that you want to use -->
+    <script src="https://www.gstatic.com/firebasejs/6.1.1/firebase-auth.js" defer></script>
+    
+    <script src="https://www.gstatic.com/firebasejs/6.1.1/firebase-database.js" defer></script>
+    <script src="/firebase.custom.script.js" defer></script>
+    
+    
+    
+  </body>
+  
+   
+</html>
